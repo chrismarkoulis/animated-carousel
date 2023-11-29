@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: burlywood
+        }
+
+        .animated {
+            position: relative;
+            overflow: hidden;
+            width: 70%;
+            height: 90%;
+            background: #000000;
+            border-radius: 15px;
+        }
+
+        .animated .item {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-animation: animated 24s linear infinite;
+            -moz-animation: animated 24s linear infinite;
+            -ms-animation: animated 24s linear infinite;
+            animation: animated 24s linear infinite;
+        }
+
+        .animated .item:nth-child(2) {
+            -webkit-animation-delay: 6s;
+            -moz-animation-delay: 6s;
+            -ms-animation-delay: 6s;
+            animation-delay: 6s;
+        }
+
+        .animated .item:nth-child(3) {
+            -webkit-animation-delay: 12s;
+            -moz-animation-delay: 12s;
+            -ms-animation-delay: 12s;
+            animation-delay: 12s;
+        }
+
+        span {
+            top: 0px;
+            left: 0px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            position: absolute;
+            font-size: 3em;
+            font-weight: bolder;
+            width: 100%;
+            text-align: center;
+            text-wrap: wrap;
+            color: orange;
+            background-color: rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        img {
+            /* display: flex; */
+            max-width: 100%;
+            max-height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .animated .item:nth-child(4) {
+            -webkit-animation-delay: 18s;
+            -moz-animation-delay: 18s;
+            -ms-animation-delay: 18s;
+            animation-delay: 18s;
+        }
+
+        @-webkit-keyframes animated {
+
+            0%,
+            25%,
+            100% {
+                opacity: 0;
+            }
+
+            4.17%,
+            20.84% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes animated {
+
+            0%,
+            25%,
+            100% {
+                opacity: 0;
+            }
+
+            4.17%,
+            20.84% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes animated {
+
+            0%,
+            25%,
+            100% {
+                opacity: 0;
+            }
+
+            4.17%,
+            20.84% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes animated {
+
+            0%,
+            25%,
+            100% {
+                opacity: 0;
+            }
+
+            4.17%,
+            20.84% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel animated">
+        <div class="item">
+            <img
+                src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <span>Online Learning is more effective than enrolling in a face to face
+                training course</span>
+        </div>
+        <div class="item">
+            <img
+                src="https://images.pexels.com/photos/5303551/pexels-photo-5303551.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" />
+            <span>Students learn more than they do in traditional courses</span>
+        </div>
+        <div class="item">
+            <img
+                src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" />
+            <span>Online learning requires less of a time investment</span>
+        </div>
+        <div class="item">
+            <img
+                src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" />
+            <span>More frequent assessments can reduce distractions</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
